@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florist - Магазин цветов и растений</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">🌿 Florist</a>
+            <button class="burger" aria-label="Меню">☰</button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="blog.html" class="nav__link">Блог</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                
+                <div class="cart-icon">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <h1>Магазин цветов и растений</h1>
+                <p>Живая красота для вашего дома с доставкой</p>
+                <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <h2>Почему выбирают нас</h2>
+                <div class="advantages__grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🌿</div>
+                        <h3>Свежесть гарантируем</h3>
+                        <p>Цветы срезаны не более 2 дней назад</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🚚</div>
+                        <h3>Бесплатная доставка</h3>
+                        <p>При заказе от 3000 ₽</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">💚</div>
+                        <h3>Эко-упаковка</h3>
+                        <p>Только перерабатываемые материалы</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🎁</div>
+                        <h3>Подарочные наборы</h3>
+                        <p>Соберём букет на любой вкус</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular">
+            <div class="container">
+                <h2>Популярные товары</h2>
+                <div class="products-grid" id="popularProducts">
+                    <div class="product-card" data-name="Роза красная" data-price="350">
+                        <img src="https://images.icon-icons.com/1478/PNG/512/rose_101950.png" alt="Роза красная">
+                        <h3>Роза красная</h3>
+                        <p class="price">350 ₽</p>
+                        <div class="product-buttons">
+                            <a href="product.html" class="btn btn-outline">Подробнее</a>
+                            <button class="btn btn-primary add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-name="Спатифиллум" data-price="1200">
+                        <img src="https://avatars.mds.yandex.net/i?id=4ed934ec27a33883f90dd0a406e101acc66e35eb-12371805-images-thumbs&n=13" alt="Спатифиллум">
+                        <h3>Спатифиллум</h3>
+                        <p class="price">1200 ₽</p>
+                        <div class="product-buttons">
+                            <a href="product.html" class="btn btn-outline">Подробнее</a>
+                            <button class="btn btn-primary add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-name="Суккулент в горшке" data-price="450">
+                        <img src="https://ir.ozone.ru/s3/multimedia-t/6342293897.jpg" alt="Суккулент">
+                        <h3>Суккулент в горшке</h3>
+                        <p class="price">450 ₽</p>
+                        <div class="product-buttons">
+                            <a href="product.html" class="btn btn-outline">Подробнее</a>
+                            <button class="btn btn-primary add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="catalog.html" class="btn btn-secondary">Смотреть больше</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-banner">
+            <div class="container promo-banner__content">
+                <h2>Подпишись и получи скидку 10%</h2>
+                <p>Будь в курсе новинок и акций</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <p>© <span class="current-year"></span> Florist. Учебный проект, Иванова Е.А.</p>
+                <div class="socials">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>hello@florist.ru</p>
+                <p>+7 (999) 123-45-67</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Модальное окно корзины -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>🛒 Моя корзина</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">Корзина пуста<br>🌿</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

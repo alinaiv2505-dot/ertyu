@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Польза комнатных растений - Florist</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">🌿 Florist</a>
+            <button class="burger" aria-label="Меню">☰</button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="blog.html" class="nav__link active">Блог</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <div class="cart-icon">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="container article">
+            <h1>Польза комнатных растений: 5 фактов, которые вас удивят</h1>
+            <div class="article-meta">
+                <span>📅 12 марта 2025</span>
+            </div>
+            <img src="https://placehold.co/800x400/E8F5E9/C44536?text=Комнатные+растения" alt="Комнатные растения" class="article-image">
+            <p class="image-caption">Комнатные растения не только украшают интерьер, но и улучшают здоровье</p>
+            
+            <h2>1. Очищение воздуха</h2>
+            <p>Комнатные растения поглощают углекислый газ и выделяют кислород. Некоторые виды, такие как хлорофитум и спатифиллум, способны поглощать формальдегид, бензол и другие вредные вещества из воздуха. Исследования NASA подтверждают, что растения очищают воздух эффективнее некоторых бытовых очистителей.</p>
+            
+            <h2>2. Увлажнение воздуха</h2>
+            <p>Растения выделяют влагу через листья — процесс, называемый транспирацией. В отопительный сезон, когда воздух в помещениях становится сухим, растения помогают поддерживать комфортный уровень влажности. Особенно эффективны в этом папоротники и циперус.</p>
+            
+            <h2>3. Снижение стресса</h2>
+            <p>Нахождение рядом с растениями снижает уровень кортизола — гормона стресса. Исследования показывают, что даже 5 минут, проведённых в окружении зелени, улучшают настроение и снижают тревожность. Лаванда и жасмин также обладают успокаивающим ароматом.</p>
+            
+            <h2>4. Повышение продуктивности</h2>
+            <p>Растения в офисе или домашнем кабинете повышают концентрацию и продуктивность на 15-20%. Зелёный цвет успокаивает глаза и снижает усталость при длительной работе за компьютером. Рекомендуем поставить на рабочий стол сансевиерию или замиокулькас.</p>
+            
+            <h2>5. Лечебные свойства</h2>
+            <p>Алоэ вера и каланхоэ обладают лечебными свойствами. Сок алоэ помогает при ожогах, порезах и воспалениях, а каланхоэ используется для заживления ран. Эти растения — настоящая зелёная аптека на подоконнике.</p>
+
+            <div class="related-articles">
+                <h3>Похожие статьи</h3>
+                <div class="related-grid">
+                    <a href="article.html" class="related-link">🌿 Как ухаживать за орхидеей</a>
+                    <a href="article.html" class="related-link">🌵 Суккуленты для начинающих</a>
+                    <a href="article.html" class="related-link">🏺 5 лучших растений для спальни</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+ <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <p>© <span class="current-year"></span> Florist. Учебный проект, Иванова Е.А.</p>
+                <div class="socials">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>hello@florist.ru</p>
+                <p>+7 (999) 123-45-67</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>🛒 Моя корзина</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">Корзина пуста<br>🌿</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

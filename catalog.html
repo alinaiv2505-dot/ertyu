@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Florist</title>
+   <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap&quot; rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">🌿 Florist</a>
+            <button class="burger" aria-label="Меню">☰</button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link active">Каталог</a></li>
+                    <li><a href="blog.html" class="nav__link">Блог</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <div class="cart-icon">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-main">
+        <div class="container">
+            <h1>Каталог товаров</h1>
+            
+            <div class="catalog-layout">
+                <aside class="filters">
+                    <h3>Категории</h3>
+                    <ul class="filter-list">
+                        <li><button data-category="all" class="filter-btn active">Все товары</button></li>
+                        <li><button data-category="flowers" class="filter-btn">🌹 Цветы (букеты)</button></li>
+                        <li><button data-category="plants" class="filter-btn">🌿 Комнатные растения</button></li>
+                        <li><button data-category="pots" class="filter-btn">🏺 Кашпо и горшки</button></li>
+                        <li><button data-category="gifts" class="filter-btn">🎁 Подарочные наборы</button></li>
+                        <li><button data-category="flower" class="filter-btn">Конфигуратор</button></li>
+                    </ul>
+                </aside>
+
+                <div class="catalog-content">
+                    <div class="catalog-toolbar">
+                        <div class="view-switcher">
+                            <button class="view-btn active" data-view="grid">📱 Плитка</button>
+                            <button class="view-btn" data-view="list">📋 Список</button>
+                        </div>
+                    </div>
+                    <div class="catalog-grid" id="catalogGrid">
+                        <!-- Товары будут загружены через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===== КОНФИГУРАТОР БУКЕТОВ ===== -->
+<section class="configurator-section" id="configurator">
+    <div class="container">
+        <h2 class="section-title">🌸 Собери свой букет</h2>
+        <p class="section-subtitle">Выбирай цветы и смотри цену в реальном времени</p>
+        
+        <div class="config-wrapper">
+            <!-- Левая часть: доступные цветы -->
+            <div class="config-options" id="configOptions">
+                <!-- Опции генерируются через JS -->
+            </div>
+            
+            <!-- Правая часть: сводка заказа -->
+            <div class="config-summary">
+                <h3>🧺 Ваш букет</h3>
+                <div class="summary-list" id="configList">
+                    <p class="empty-summary">Пока пусто...<br>🌿 Добавьте цветы слева</p>
+                </div>
+                <div class="summary-footer">
+                    <div class="total-row">
+                        <span>Итого:</span>
+                        <span class="total-price" id="configTotal">0 ₽</span>
+                    </div>
+                    <button class="btn btn-primary config-order-btn" id="configOrderBtn" disabled>
+                        🛒 Оформить букет
+                    </button>
+                    <button class="btn btn-outline config-clear-btn" id="configClearBtn">
+                        🗑️ Очистить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <p>© <span class="current-year"></span> Florist. Учебный проект, Иванова Е.А.</p>
+                <div class="socials">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>hello@florist.ru</p>
+                <p>+7 (999) 123-45-67</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div
+
+
+class="cart-header">
+            <h3>🛒 Моя корзина</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">Корзина пуста
+🌿</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Орхидея фаленопсис - Florist</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">🌿 Florist</a>
+            <button class="burger" aria-label="Меню">☰</button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link active">Каталог</a></li>
+                    <li><a href="blog.html" class="nav__link">Блог</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <div class="cart-icon">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container product-detail">
+            <div class="product-images">
+                <img src="https://images.icon-icons.com/1478/PNG/512/rose_101950.png" alt="Роза красная премиум">
+            </div>
+            <div class="product-info">
+                <h1>Роза красная премиум</h1>
+                <p class="price">350 ₽</p>
+                
+                <div class="product-description">
+                    <p>Классическая красная роза сорта Freedom. Свежий срез, плотный бутон, который медленно распускается. Идеальна для романтических букетов и моно-композиций.</p>
+                    <p><strong>Состав:</strong> Роза свежесрезанная</p>
+                    <p><strong>Страна происхождения:</strong> Нидерланды</p>
+                </div>
+
+                <!-- Календарь доставки -->
+                <div class="delivery-calendar">
+                    <h3>Выберите дату доставки</h3>
+                    <input type="date" id="deliveryDate" class="date-input" min="">
+                    <p class="delivery-note">🚚 Доставка бесплатно при заказе от 3000 ₽</p>
+                </div>
+
+                <button class="btn btn-primary add-to-cart" data-name="Роза красная премиум" data-price="350">Добавить в корзину</button>
+
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="desc">Описание</button>
+                    <button class="tab-btn" data-tab="specs">Характеристики</button>
+                    <button class="tab-btn" data-tab="reviews">Отзывы</button>
+                </div>
+                <div class="tab-content active" id="desc">
+                    <p>Роза — многолетнее растение семейства розовых (Rosa), ценная декоративная и эфиромасличная культура. Существует около 400 видов, дико произрастающих в умеренной и субтропической зонах Северного полушария.</p>
+                    <p><strong>Способ применения:</strong> Поливать раз в 2-3 дня, оптимальная температура 18-22°C.</p>
+                </div>
+                <div class="tab-content" id="specs">
+                    <ul>
+                        <li><strong>Высота:</strong> 50-60 см</li>
+                        <li><strong>Освещение:</strong> 6 часов солнечного света в день</li>
+                        <li><strong>Полив:</strong> умеренный</li>
+                        <li><strong>Сложность ухода:</strong> средняя</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="reviews">
+                    <div class="review">
+                        <p>⭐⭐⭐⭐⭐ - Прекрасный подарок!</p>
+                        <small>- Анна, 15.03.2025</small>
+                    </div>
+                    <div class="review">
+                        <p>⭐⭐⭐⭐ - Очень красивая, доставили в отличном состоянии.</p>
+                        <small>- Михаил, 10.03.2025</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <p>© <span class="current-year"></span> Florist. Учебный проект, Иванова Е.А.</p>
+                <div class="socials">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>hello@florist.ru</p>
+                <p>+7 (999) 123-45-67</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>🛒 Моя корзина</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">Корзина пуста<br>🌿</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
